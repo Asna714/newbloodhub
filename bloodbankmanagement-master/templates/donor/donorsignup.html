@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <br><br><br>
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title">Donor Signup</h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" autocomplete="off" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        <div class="form-row">
+                            <div class="name">First Name</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input type="text" name="first_name" class="input--style-5" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rest of the form fields -->
+
+                        <div class="form-row">
+                            <div class="name">Latitude</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input id="latitude" name="latitude" type="text" class="input--style-5" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="name">Longitude</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input id="longitude" name="longitude" type="text" class="input--style-5" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button class="btn btn--radius-2 btn-danger" type="submit">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha384-FsD/+fFS2zlZyM2SslBlk+0HUEK/YQIkB7XWz5wDDxj5k8r2b4OO1Cm3Ez8DGQfr"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- OpenRouteService API -->
+    <script src="https://maps.openrouteservice.org/assets/js/ors-js-client.js"></script>
+
+    
+    <script>
+        function initMap() {
+            var map = new OpenrouteserviceMaps({
+                target: 'map',
+                api_key: '5b3ce3597851110001cf624898e7bc26f7ae42b38ed75d46200e9d95'
+            });
+    
+            map.on('click', function (e) {
+                var latitude = e.latlng.lat;
+                var longitude = e.latlng.lng;
+    
+                document.getElementById('latitude').value = latitude;
+                document.getElementById('longitude').value = longitude;
+            });
+        }
+    
+        document.addEventListener('DOMContentLoaded', function () {
+            initMap();
+        });
+    </script>
+</body>
+
+</html>

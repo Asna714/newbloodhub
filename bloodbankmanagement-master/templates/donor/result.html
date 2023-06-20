@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            color: #555;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        }
+        h3 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Closest Donors</h1>
+    {% if closest_donors %}
+        <ul>
+            {% for donor, distance in closest_donors %}
+                <li>
+                    <h3>{{ donor.get_name }} - {{ distance }} km</h3>
+                    <p><strong>Blood Group:</strong> {{ donor.bloodgroup }}</p>
+                    <p><strong>Address:</strong> {{ donor.address }}</p>
+                    <p><strong>Mobile:</strong> {{ donor.mobile }}</p>
+                    <p><strong>Latitude:</strong> {{ donor.latitude }}</p>
+                    <p><strong>Longitude:</strong> {{ donor.longitude }}</p>
+                    {% if donor.profile_pic %}
+                        <img src="{{ MEDIA_URL }}{{ donor.profile_pic.url }}" alt="{{ donor.get_name }} Profile Picture">
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No donors found.</p>
+    {% endif %}
+</body>
+</html>

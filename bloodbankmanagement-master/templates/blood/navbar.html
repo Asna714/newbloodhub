@@ -1,0 +1,935 @@
+
+{%load static%}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BloodHub</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link href="{% static "assets/img/favicon.png" %}" rel="icon">
+  <link href="{% static "assets/img/apple-touch-icon.png" %}"rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static "assets/vendor/bootstrap/css/bootstrap.min.css" %}"rel="stylesheet">
+  <link href="{% static "assets/vendor/bootstrap-icons/bootstrap-icons.css" %}"rel="stylesheet">
+  <link href="{% static "assets/vendor/bootstrap-icons/bootstrap-icons.css" %}"rel="stylesheet">
+  <link href="{% static "assets/vendor/aos/aos.css" %}"rel="stylesheet">
+  <link href="{% static "assets/vendor/glightbox/css/glightbox.min.css"%}" rel="stylesheet">
+  <link href="{% static "assets/vendor/swiper/swiper-bundle.min.css" %}"rel="stylesheet">
+
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar d-flex align-items-center">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@feel4.com</a></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>BloodHub<span>.</span></h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#services">WANT TO SEEK BLOOD</a></li>
+          <li><a href="#call-to-action">WANT TO DONATE BLOOD</a></li>
+          <li><a href="#services">BLOOD BANK</a></li>
+          <li><a href="/adminlogin">ADMIN</a></li>
+          <li class="dropdown"><a href="#"><span>ANY DOUBTS?</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              
+
+              <li><a href="#pricing">WHAT IS IT?</a></li>
+              <li><a href="#pricing">WHO CAN DONATE?</a></li>
+              <li><a href="#portfolio">COMPATIBLE BLOOD TYPE DONORS</a></li>
+
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+    <div class="container position-relative">
+      <div class="row gy-5" data-aos="fade-in">
+        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
+          <h2>Welcome to <span>BloodHub</span></h2>
+          <p>Give blood, save a life. It's the gift of life that costs nothing but means everything.</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started">Get Started</a>
+            <a href="https://youtu.be/Af0gk_kiGac" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2">
+          <img src={% static "assets/img/home.png" %} class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="500">
+        </div>
+      </div>
+    </div>
+
+    <div class="icon-boxes position-relative">
+      <div class="container position-relative">
+        <div class="row gy-4 mt-5">
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-easel"></i></div>
+              <style>
+                .button {
+                  display: inline-block;
+                  background-color: #1a988a; /* Set the background color to white */
+                  color: blue; /* Set the text color to blue */
+                  padding: 10px 20px;
+                  text-decoration: none;
+                  border-radius: 5px;
+                }
+                </style>
+                
+                <h4 class="title"><a href="/donor/donorsignup" class="button stretched-link">Donate blood</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-gem"></i></div>
+              <style>
+                .button {
+                  display: inline-block;
+                  background-color: #1a988a; /* Set the background color to white */
+                  color: blue; /* Set the text color to blue */
+                  padding: 10px 20px;
+                  text-decoration: none;
+                  border-radius: 5px;
+                }
+                </style>
+                
+                <h4 class="title"><a href="/donor/find-closest-address" class="button stretched-link">Request blood</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-geo-alt"></i></div>
+              <style>
+                .button {
+                  display: inline-block;
+                  background-color: #1a988a; /* Set the background color to white */
+                  color: blue; /* Set the text color to blue */
+                  padding: 10px 20px;
+                  text-decoration: none;
+                  border-radius: 5px;
+                }
+                </style>
+                
+                <h4 class="title"><a href="/bank/bindex" class="button stretched-link">Find blood bank</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+           <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-command"></i></div>
+              <h4 class="title"><a href="event-list" class="button stretched-link">Camp Calender</a></h4>
+            </div>
+          </div><!--End Icon Box -->
+
+          
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p>A E Blood Bank management website that could make blood donation and blood bank directory easy to handle</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            
+            <img src={% static "image\img\life.jpg"%} class="img-fluid rounded-4 mb-4" alt="">
+           </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                <strong>Before Your Donation</strong>
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Make sure you're eligible to donate blood.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Register an account.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Search for your nearest blood banks.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Schedule an appointment.</li>
+              </ul>
+              
+
+              <div class="position-relative mt-4">
+                <img src={% static "assets/img/home-2.png"%}  class="img-fluid rounded-4" alt="">
+                <p>Blood transfusions are one of the most frequently performed procedures in hospitals and help treat patients suffering traumatic injuries, undergoing surgery, receiving treatment for cancer or blood disorders, as well as new mothers and premature babies.</p>
+            
+                <h3>COVID-19 Vaccinations?</h3>
+
+                <p>In most cases, you can give blood after getting a COVID-19 vaccine if you are symptom-free and feeling well at the time of the donation! Ask your donation center for more information.</p>
+          
+                <a href="https://www.youtube.com/watch?v=ezafVzfJw60" class="glightbox play-btn"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients">
+      <div class="container" data-aos="zoom-out">
+
+        <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src={% static "assets/img/blood-logo-1.jpg"%} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={% static "assets/img/blood-logo-2.jpg"%} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={% static "assets/img/blood-logo-1.jpg"%} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={% static "assets/img/blood-logo-2.jpg"%} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={% static "assets/img/blood-logo-1.jpg"%} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={% static "assets/img/blood-logo-2.jpg"%} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={% static "assets/img/blood-logo-1.jpg"%} class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src={% static "assets/img/blood-logo-2.jpg"%} class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Clients Section -->
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6"><br><br>
+            <img src={% static "assets/img/blood.png"%} alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-6"><br><br><br>
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Donors Registered</strong>hfkdje</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Blood Banks Registered</strong>jdjdkd</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>No of Donations</strong>jddkdkd</p>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Stats Counter Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container text-center" data-aos="zoom-out">
+         </a><br><br>
+        <h3>CLICK ON DONATE </h3>
+        <p>You may never know how precious the gifts you possess until you lose them. Never wait to realize it and help save some lives by donating blood.</p>
+        <li class="nav-item">
+          <a class="nav-link" style="color: white;" href="/donor/donorlogin"><i class="fas fa-user"></i>&nbsp; DONATE</i></a>
+      </li>
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= Our Services Section ======= -->
+    <section id="services" class="services sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <br><br>
+          <a class="cta-btn" href="/donor/find-closest-address">Find the Closest Donor</a>
+          <br>
+          <br>
+          <br>
+          <a class="cta-btn" href="/bank/bindex">Find the Closest BloodBank</a>
+
+<style>
+
+.cta-btn {
+    display: inline-block;
+    background-color: #228B22;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #fff;
+}
+</style>
+
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-activity"></i>
+              </div>
+              <h3>Donor Registration</h3>
+              <p>Register as donor today. You'll be able to find your nearest blood banks and schedule appointments for your blood donation. You'll also be contacted if there's any need of your blood type.</p>
+              <a href="/donor/donorsignup" class="readmore stretched-link">Click here <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <h3>Blood Bank Registration</h3>
+              <p>Register as a blood bank and simplify your blood bank directory management. Make it easier to keep track of your blood stocksand get to know the donors better.</p>
+              <a href="/bank/banksignup" class="readmore stretched-link">Click here <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-easel"></i>
+              </div>
+              <h3>Request Blood</h3>
+              <p>Find your nearest donor using your location when in need of blood urgently.</p>
+              <a href="/donor/indexx" class="readmore stretched-link">Click here <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          
+        </div>
+
+      </div>
+    </section><!-- End Our Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <br>
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>Let's hear what fellow donors have to say</p>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <h3>Saul Goodman</h3>
+                      <h4>Ceo &amp; Founder</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                  <div class="d-flex align-items-center">
+                    <img src={% static "assets/img/testimonials/testimonials-1.jpg"%} class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      
+                      
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                   
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                  <div class="d-flex align-items-center">
+                    <img src={% static "assets/img/testimonials/testimonials-2.jpg"%} class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <h3>Jena Karlis</h3>
+                      <h4>Store Owner</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                  <div class="d-flex align-items-center">
+                    <img src={% static "assets/img/testimonials/testimonials-3.jpg"%} class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <h3>Matt Brandon</h3>
+                      <h4>Freelancer</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                  <div class="d-flex align-items-center">
+                      <img src={% static "assets/img/testimonials/testimonials-4.jpg"%} class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                      
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                   <h3>John Larson</h3>
+                      <h4>Entrepreneur</h4>
+                      <div class="stars">
+                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                      </div>
+                  <div class="d-flex align-items-center">
+                    <img src={% static "assets/img/testimonials/testimonials-5.jpg"%} class="testimonial-img flex-shrink-0" alt="">
+                    <div>
+                     
+                    </div>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <br><br>
+          <h2>Compatibility Chart</h2>
+          <p>To whom you are compatible with</p>
+        </div>
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
+
+          <div>
+            <ul class="portfolio-flters">
+            <img src={% static "assets/img/compatibility.jpg"%} class="img-fluid rounded-4 mb-4" alt="">
+
+            </ul><!-- End Portfolio Filters -->
+          </div>
+
+          <div class="row gy-4 portfolio-container">
+
+            
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Info</h2>
+          <p>KNOW MORE ABOUT DONATION</p>
+        </div>
+
+        <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>You might wanna know</h3>
+              <div class="icon">
+                <i class="bi bi-box"></i>
+              </div>
+
+              <ul>
+                <li><i class="bi bi-check"></i> Lasts For?
+                  
+                <li><i class="bi bi-check"></i> Red cells can be stored for 42 days.i></li>
+                <li><i class="bi bi-check"></i> How long does it take?</li>
+                <li><i class="bi bi-check"></i> 15 minutes to donate.</li>
+                <li><i class="bi bi-check"></i> How often can I donate?</li>
+                <li><i class="bi bi-check"></i> Every 12 weeks</li>
+              </ul>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item featured">
+              <h3>WHAT IS IT</h3>
+              <div class="icon">
+                <i class="bi bi-airplane"></i>
+              </div>
+
+              <ul>
+                <li><i class="bi bi-check"></i> Blood donation is a selfless act of giving life to others in need by donating blood.</li>
+                <li><i class="bi bi-check"></i>It's the process of voluntarily giving a portion of your blood to be used for transfusions or other medical procedures.</li>
+                <li><i class="bi bi-check"></i> Blood donation plays a vital role in healthcare, as it helps save millions of lives each year.</li>
+                <li><i class="bi bi-check"></i> By donating blood, you are contributing to your community and making a significant impact on someone's life.</li>
+                <li><i class="bi bi-check"></i> Blood donation is a simple and safe process that takes just a few minutes, but its impact can last a lifetime.</li>
+              </ul>
+              <div class="text-center"><a href="/donor/donorsignup" class="buy-btn">I'm Willing</a></div>
+            </div>
+          </div><!-- End Pricing Item -->
+
+          <div class="col-lg-4">
+            <div class="pricing-item">
+              <h3>WHO CAN DONATE</h3>
+              <div class="icon">
+                <i class="bi bi-send"></i>
+              </div>
+          
+              <ul>
+                <li><i class="bi bi-check"></i> You need to be 18-65 years old, weigh 45kg or more and be fit and healthy.</li>
+              </ul>
+              
+    
+          </div><!-- End Pricing Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="content px-xl-5">
+              <h3>Frequently Asked <strong>Questions</strong></h3>
+              <p>
+                questions
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+
+            <div class="accordion accordion-flush" id="faqlist" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
+                    <span class="num">1.</span>
+                    question1
+                  </button>
+                </h3>
+                <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    answer1
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
+                    <span class="num">2.</span>
+                    question2
+                  </button>
+                </h3>
+                <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    answer2
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
+                    <span class="num">3.</span>
+                    question3
+                  </button>
+                </h3>
+                <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    answer3
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
+                    <span class="num">4.</span>
+                    question4
+                  </button>
+                </h3>
+                <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                  <div class="accordion-body">
+                    answer4
+                  </div>
+                </div>
+              </div><!-- # Faq item-->
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section> <!-- End Frequently Asked Questions Section -->
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-posts" class="recent-posts sections-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Recent Blog Posts</h2>
+          <p>Want to know more?</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6">
+            <article>
+
+              <div class="post-img">
+                <img src={% static "assets/img/blog/blog-1.jpg"%} alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">
+                <a href="https://medium.com/dancing-elephants-press/would-you-donate-blood-to-save-a-life-5980f31ca799">would you donate blood to save a life</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src={% static "assets/img/blog/blog-1.jpg"%} alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Dr Grabiella Korosi</p>
+                  <p class="post-date">
+                    <time datetime="2023-01-01">Mar 26, 2023</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6">
+            <article>
+
+              <div class="post-img">
+                <img src={% static "assets/img/blog/blog-2.jpg"%} alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">
+                <a href="https://medium.com/@fanciedfacts/a-bloody-mistake-the-dangers-of-receiving-the-wrong-blood-type-3498f2aafb03">A Bloody Mistake: The Dangers of Receiving the Wrong Blood Type</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src={% static "assets/img/blog/blog-post-2.jpg"%} alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Fancied Facts</p>
+                  <p class="post-date">
+                    <time datetime="2023-01-01">Apr 1, 2023</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+          <div class="col-xl-4 col-md-6">
+            <article>
+
+              <div class="post-img">
+                <img src={% static "assets/img/blog/blog-post-3.jpeg"%} alt="" class="img-fluid">
+              </div>
+
+              <h2 class="title">
+                <a href="https://medium.com/@rohini.nene2050/benefits-of-donating-blood-how-to-know-the-benefits-of-blood-donation-in-terms-of-health-bd60d8340252">Benefits of donating blood, how to know the benefits of blood donation in terms of health</a>
+              </h2>
+
+              <div class="d-flex align-items-center">
+                <img src={% static "assets/img/blog/blog-post-3.jpg"%} alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author">Rohini N</p>
+                  <p class="post-date">
+                    <time datetime="2023-01-01">Mar 01, 2023</time>
+                  </p>
+                </div>
+              </div>
+
+            </article>
+          </div><!-- End post list item -->
+
+        </div><!-- End recent posts list -->
+
+      </div>
+    </section><!-- End Recent Blog Posts Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <br><br>
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+  
+
+        <div class="row gx-lg-0 gy-4">
+
+          <div class="col-lg-4">
+
+            <div class="info-container d-flex flex-column align-items-center justify-content-center">
+              <div class="info-item d-flex">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h4>Location:</h4>
+                  <p>ABC Street XYZ, City 672431</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h4>Email:</h4>
+                  <p>info@example.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-phone flex-shrink-0"></i>
+                <div>
+                  <h4>Call:</h4>
+                  <p>+91 58955 48855</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex">
+                <i class="bi bi-clock flex-shrink-0"></i>
+                <div>
+                  <h4>Time:</h4>
+                  <p>Know the</p>
+                </div>
+              </div><!-- End Info Item -->
+            </div>
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span></span>
+          </a>
+          <p></p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Register as Donor</a></li>
+            <li><a href="#">Search for Donors</a></li>
+            <li><a href="#">Blood Bank Directory Management</a></li>
+            <li><a href="#">Blood Donation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            ABC Street <br>
+            XYZ, City 672431<br>
+            India <br><br>
+            <strong>Phone:</strong> +91 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        
+      </div>
+      <div class="credits">
+        
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
